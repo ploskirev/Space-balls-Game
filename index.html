@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space balls</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <p class="goal">Goal: 25</p>
+    <p class="score">Ball count:</p>
+    <canvas></canvas>
+    <div class="message">
+      <h1></h1>
+      <div class="rules">
+        <h2>Правила игры</h2>
+        <p>Цель игры - успеть съесть все шары, пока они не станут одного цвета.
+          Шары меняют цвет при соударениях. Будьте внимательны и охотьтесь за шарами нужного цвета, 
+          чтобы на игровом поле оставались шары хотя бы двух цветов. 
+          Если шар Вас заметил, он подсветится и постарается удрать.<br>
+          Удачи!
+        </p>
+        <label for="sound">Звук <input type="checkbox" id="sound" checked></label>
+        
+        <button onclick="requestAnimationFrame(loop)">НАЧАТЬ</button>
+      </div>
+    </div>
+    <div class="mute hidden"></div>
+    <audio
+      preload="auto"
+      loop
+      src="sound.mp3">
+    </audio>
+    
+
+    <script src="main.js"></script>
+  </body>
+</html>
